@@ -1,0 +1,14 @@
+<div class = "container">
+	
+<h3>Totaly <%= @posts.count %> screencodes.</h3>
+<% @posts.each do |p| %>
+<div>
+	<h2><a href="/posts/<%= p.id %>"><%= p.title %></a></h2>
+	<p><%= p.text %></p>
+	<span><a href="/posts/<%= p.id %>/edit">Edit post</a></span> 
+	<span><a href="/posts/<%= p.id %>" data-method="delete">Delete post</a></span> 
+</div>
+<% end %>
+<a href="/posts/new">New post</a>
+<a href="/posts">Main page</a>
+</div>

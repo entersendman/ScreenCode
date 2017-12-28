@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </head>
+<header class="header">
+    <ul>
+        <li>ScreenCode</li>
+        <li>Log In</li>
+        <li>Sign In</li>
+    </ul>
+</header>
+
+  <body>
+    <%= yield %>
+    
+  </body>
+
+  <footer class="footer">
+    <p> ScreenCode organization 2017</p>
+  </footer>
+</html>
