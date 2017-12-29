@@ -1,5 +1,19 @@
-<h1 class = "h1">Screencode</h1>
-<div class = "showPosts">
-	<h2><%= @post.title %></h2>
-	<p><%= @post.text %></p>
+<h1 >Screencode</h1>
+
+<div class="showPosts">
+	
+<h2><%= @post.title %></h2>
+<p><%= @post.text %></p>
+
+
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+  <div class="screenName"><%= @post.title.downcase %></div>
+</div>
+<div class="fakeScreen">
+
+</div>
+
 </div>	

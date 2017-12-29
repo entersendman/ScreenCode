@@ -7,11 +7,13 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
-<header class="header">
+<header>
     <ul>
-        <li>ScreenCode</li>
-        <li>Log In</li>
-        <li>Sign In</li>
+        <li><a href="/posts"> ScreenCode </a></li>
+        <li class="auth">
+        <span><a href="#"> Log in </a></span>
+        <span><a href="#"> Sign up </a></span>
+        </li>
     </ul>
 </header>
 
@@ -20,7 +22,7 @@
     
   </body>
 
-  <footer class="footer">
+  <footer>
     <p> ScreenCode organization 2017</p>
   </footer>
 </html>
