@@ -1,0 +1,22 @@
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<p><%= e %></p>
+	<% end %>
+<% end %>
+
+<%= form_for(@post)  do |f| %>
+<div>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+</div>
+<div>
+	<%= f.label :text %>
+	<%= f.text_field :text %>
+</div>
+
+<div>
+	<%= f.label :code %>
+	<%= f.text_area :code %>
+</div>
+<%= f.submit :title %>
+<% end %>

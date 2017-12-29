@@ -1,3 +1,4 @@
+<% content_for(:title, " Gallery") %>
 <div class = "container">
 <h1>Welcome to ScreenCode Project. Here you can explore Screens from other users.</h1>	
 
@@ -6,8 +7,8 @@
 	<h2><a href="/posts/<%= p.id %>"><%= p.title %></a></h2>
 	<p><%= p.text %></p>
 	<div class="settings">
-	<span><a href="/posts/<%= p.id %>/edit">Edit post</a></span> 
-	<span><a href="/posts/<%= p.id %>" data-method="delete">Delete post</a></span> 
+	<span><%= link_to "Edit", post_edit_path(p.id) %></span> 
+	<span><%= link_to "Delete", post_path(p.id) , data={method: :delete} %></span> 
 	</div>
 </div>
 <% end %>

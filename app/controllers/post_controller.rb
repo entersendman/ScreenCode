@@ -4,15 +4,17 @@ class PostController < ApplicationController
 	end
 
 	def new
+		@post = Post.new
 	end
 
 	def create
 		post = Post.new(post_params)
 
 		if post.save
-			redirect_to "/posts"
+			redirect_to :root
 		else
-			redirect_to "/posts/new"
+			flash[:errors] = post.errors.full_messages
+			redirect_to :posts_new
 		end
 	end
 
@@ -28,21 +30,22 @@ class PostController < ApplicationController
 		post = Post.find(params[:id])
 
 		if post.update(post_params)
-			redirect_to "/posts/#{post.id}"
+			redirect_to post_path(post.id)
 		else
-			redirect_to "/posts/#{post.id}/edit"
+			flash[:errors] = post.errors.full_messages
+			redirect_to post_edit_path(post.id)
 		end
 	end
 
 	def destroy
 		post = Post.find(params[:id])
 		post.destroy
-		redirect_to "/posts/"
+		redirect_to :root
 	end
 	
 	private
 
 	def post_params
-		params.require(:post).permit(:title, :text)
+		params.require(:post).permit(:title, :text, :code)
 	end
 end

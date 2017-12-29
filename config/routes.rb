@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get "posts" => "post#index"
   get "posts/new" => "post#new"
   post "posts" => "post#create"
-  get "posts/:id" => "post#show"
-  get "posts/:id/edit" => "post#edit"
+  get "posts/:id" => "post#show", as: "post"
+  get "posts/:id/edit" => "post#edit", as: "post_edit"
   patch "posts/:id" => "post#update"
   delete "posts/:id" => "post#destroy"
 end

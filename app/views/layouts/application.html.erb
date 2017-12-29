@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project</title>
+    <title> ScreenCode<%= yield(:title) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -9,7 +9,7 @@
   </head>
 <header>
     <ul>
-        <li><a href="/posts"> ScreenCode </a></li>
+        <li><%= link_to "ScreenCode", root_path %> </li>
         <li class="auth">
         <span><a href="#"> Log in </a></span>
         <span><a href="#"> Sign up </a></span>
@@ -22,7 +22,7 @@
     
   </body>
 
-  <footer>
+  <footer >
     <p> ScreenCode organization 2017</p>
   </footer>
 </html>

@@ -1,3 +1,4 @@
+<% content_for(:title, " #{@post.title}") %>
 <h1 >Screencode</h1>
 
 <div class="showPosts">
@@ -13,7 +14,7 @@
   <div class="screenName"><%= @post.title.downcase %></div>
 </div>
 <div class="fakeScreen">
-
+<%= @post.code %>
 </div>
 
 </div>	

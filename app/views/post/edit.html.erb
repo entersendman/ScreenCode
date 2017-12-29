@@ -1,3 +1,4 @@
+<% content_for(:title, " Edit #{@post.title}") %>
 <form action="/posts/<%= @post.id %>" method="post">
 	<input type="hidden" name="_method" value="patch">
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -6,8 +7,12 @@
 	<input type="text" name="post[title]"  value="<%= @post.title%>">
 	</div>
 	<div>
-	<label>Code:</label>
+	<label>Description:</label>
 	<textarea rows="10" cols="45" name="post[text]" ><%= @post.text%></textarea>
+	</div>
+	<div>
+	<label>Code:</label>
+	<textarea rows="10" cols="45" name="post[code]" ><%= @post.code%></textarea>
 	</div>
 	<input type="submit" value="Update">
 </form>
