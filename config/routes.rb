@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   get "posts/:id/edit" => "post#edit", as: "post_edit"
   patch "posts/:id" => "post#update"
   delete "posts/:id" => "post#destroy"
+  resources :photos, path_names: { new: 'make', edit: 'change'}, expect: [:destroy, :show, :update]
+  post "post/:id/comments" => "comment#create", as: "post_comments"
+  delete "post/:id/comments/" => "comment#destroy"
 end

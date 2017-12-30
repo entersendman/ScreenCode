@@ -17,4 +17,20 @@
 <%= @post.code %>
 </div>
 
-</div>	
+</div>
+
+<% @comments.each do |c| %>
+<p><%= c.comment_text %></p>
+<span><%= link_to "Delete", post_comments_path(c.id) , data={method: :delete} %></span> 
+<% end %>
+
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.label :comment_text %><br />
+    <%= f.text_field :comment_text %>
+  </div>
+  <%= f.hidden_field :post_id %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>	
