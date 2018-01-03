@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,700');
+
+body, html {
+	font-family: 'Dosis', sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #4b3832;
+	background-color: #fff4e6; 
+}
+a {
+	transition: 0.31s;
+	text-decoration: none;
+	color: #4b3832;
+}
+a:hover {
+	color:  	#f4f3f3;
+}
+
+h1 {
+	font-weight: 300;
+	text-align: center;
+	color: #854442;
+}
+.header {
+	background-color: #3c2f2f;
+	border-bottom: 1px solid black;
+	height: 100%;
+
+}
+.header a {
+	color: #be9b7b;;
+}
+.header a:hover {
+	color: #dbdada;
+}
+.header ul {
+	font-size: 20px;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	padding: 20px 0;
+}
+
+.header ul li {
+	padding: 0px 25px;
+}
+
+.header ul li.auth span {
+	padding: 0px 25px;
+}
+footer {
+	background-color: #3c2f2f;
+	border-top: 1px solid black;
+	color:  	#be9b7b;
+	padding: 20px 0;
+	display: flex;
+	justify-content:center;
+}
+.banner {
+	 background: linear-gradient(to right, rgba(245,241,236), rgba( 76,62,49));
+	width: 100%;
+	height: 500px;
+	display: flex;
+	justify-content:space-around;
+
+}
+.banner .leftHalf {
+	width: 50%;
+	padding: 20px;
+	float: left;
+}
+.banner .leftHalf p{
+	padding: 0;
+	margin: 0;
+}
+.banner .leftHalf span{
+	font-size: 1.5rem;
+	color: #16120e;
+	opacity: 0.7;
+
+}
+.banner .leftHalf p em{
+	font-size: 3.5rem;
+	color: #16120e;
+}
+.banner .rightHalf {
+	width: 50%;
+	padding: 20px;
+	float: right;
+	display: flex;
+	justify-content:center;
+}
+.banner .rightHalf img{
+	height: 100%;
+	width: 80%;
+	box-shadow: 10px 10px 5px #2d251d;
+	
+	}
