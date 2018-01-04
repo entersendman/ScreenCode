@@ -6,6 +6,7 @@ body, html {
 	padding: 0;
 	color: #4b3832;
 	background-color: #fff4e6; 
+
 }
 a {
 	transition: 0.31s;
@@ -57,12 +58,16 @@ footer {
 	display: flex;
 	justify-content:center;
 }
+
+
+.userBio {
+	padding: 0;	
+	flex-grow: 2;
+}
 .imgProfile {
   
-  width:70px;
-  border-radius: 50%;  
- 
- 
+  width:20%;
+  border-radius: 50%;   
   border: 2px solid #3c2f2f;
 }
 img {
@@ -70,14 +75,9 @@ img {
   width: 100%;  
   
 }
-
-.userBio {
-	padding: 0;	
-	width: 30%;
-	padding: 15px;
-}
 .userBio h2 {
 	text-align: center;
+	width: 20%;
 }	
 .userBio ul {
 	display: flex;
@@ -91,28 +91,16 @@ img {
 	margin: 0;
 }
 .container {
-	max-width: 90%;
-	margin: 0 auto;
+	width:100%;	
 	height: 100%;
+	margin: 0;
+	padding: 0;
 	display: flex;
-	justify-content:space-between;
+	justify-content:space-around;
 }
-.social ul {
-	margin: 25px;
-}
-.social ul li {
+.container li {
 	list-style: none;
 	padding: 10px;
-}
-
-.leftPanelOfScreen {
-	width: 30%;
-	padding: 15px 0;
-	}
-.rightPanelOfScreen {
-	width: 30%;
-	
-	padding: 15px 0;
 }
 
 

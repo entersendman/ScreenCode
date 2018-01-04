@@ -11,3 +11,26 @@
 // about supported directives.
 //
 //= require rails-ujs
+
+$(document).ready(function() {
+
+	console.log('hi');
+
+	$('.textOfPost').not(':first').hide();
+
+		$('.post>h2').click(function() {
+			var findP = $(this).next();
+			var findPost = $(this).closest('.post');
+
+			if (findP.is(':visible')) {
+				findP.slideUp('fast');
+			}else{
+
+				findPost.find('>textOfPost').slideUp('fast');
+				findP.slideDown('fast');
+			}
+
+
+
+		});
+});
