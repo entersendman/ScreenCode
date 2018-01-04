@@ -18,19 +18,28 @@
 </div>
 
 </div>
-
+<div class="containerOfComments">
 <% @comments.each do |c| %>
-<p><%= c.comment_text %></p>
-<span><%= link_to "Delete", post_comments_path(c.id) , data={method: :delete} %></span> 
-<% end %>
 
+<div class="commentField">
+<ul>
+  <li><img src="http://gzsihai.com/data/out/43/im-500200020.png" alt="commentUserPhoto"></li>
+  <li>Anonymus</li>
+  <li><%= c.comment_text %></li>
+  <li><%= link_to "Delete", post_comments_path(c.id) , data={method: :delete} %></li>
+</ul>
+</div>
+<p></p>
+<% end %>
+</div>
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <div class="field">
     <%= f.label :comment_text %><br />
-    <%= f.text_field :comment_text %>
+    <%= f.text_area :comment_text, placeholder: "Write your comment ...", cols: "80", class: 'formTextarea' %>
+
   </div>
   <%= f.hidden_field :post_id %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit %> 
   </div>
 <% end %>	

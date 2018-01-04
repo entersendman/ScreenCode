@@ -177,3 +177,133 @@ footer {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.field {
+	width: 75%;
+	display: flex;
+	justify-content: flex-start;
+	margin: 0 auto;
+	
+}
+.field .formTextarea{
+	border: 1px solid #4b3832;	
+	padding: 5px 8px;
+	border-radius: 5px;	
+	width: 64%;
+	height: 50px;
+	resize: none;
+}
+.field .formTextarea:focus {
+	background-color: #FFF4E6;
+	border-radius: 5px;
+	border: 1px solid #854442;
+	height: 100px;
+
+	
+}
+.field label {
+	padding-right:  10px;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.actions {
+	width: 47%;
+	display: flex;
+	justify-content: flex-end;
+	margin: 0 auto;
+	padding: 5px 0;
+
+}
+.actions input[type=submit]{
+	text-decoration: none;
+	border-radius: 7px;
+	padding: 8px;
+	border: 2px solid #854442;
+	background-color: #FFF4E6;
+	font-size: 1rem; 
+	color: #854442;
+}
+
+.actions input[type=submit]:hover{
+	font-size: 1rem; 
+	color: #f4f3f3;
+	background-color: #3c2f2f;
+	}	
+.commentField {
+	width: 80%;
+	float: left;
+	padding: 8px;
+	background-color: #e5d7ca;
+	border-radius: 10px;
+	height: 100%;
+
+}
+.commentField ul {
+	font-size: 1rem;
+	margin: 0;	
+	list-style: none;
+	padding: 10px
+}
+.commentField ul>li:nth-child(1) {
+	display: inline;
+	
+}
+.commentField ul>li:nth-child(2) {
+	padding-bottom: 4px ;
+	font-weight: 600;
+	
+}
+.commentField img {
+	
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.commentField ul>li:nth-last-child(1) {
+	float: right;
+	padding: 0;
+	color: #a91c17;
+	font-weight: 600;
+}
+
+.commentFieldul li {
+
+	}
+
+.containerOfComments {
+	display: flex;
+	width: 75%;
+	margin: 0 auto;
+	flex-direction:column;
+	justify-content: space-around;
+}
+
