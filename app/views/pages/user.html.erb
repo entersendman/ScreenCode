@@ -1,0 +1,39 @@
+<div class="container">		
+	<div class="leftPanelOfScreen">
+		<div class=fakeMenu>
+		<div class="fakeButtons fakeClose"></div>
+		<div class="fakeButtons fakeMinimize"></div>
+		<div class="fakeButtons fakeZoom"></div>
+		<div class="screenName"></div>
+		</div>
+		<div class="fakeScreen">
+		.fakeButtons 
+		</div>
+	</div>
+
+	<div class="rightPanelOfScreen">
+		<div class=fakeMenu>
+		<div class="fakeButtons fakeClose"></div>
+		<div class="fakeButtons fakeMinimize"></div>
+		<div class="fakeButtons fakeZoom"></div>
+		<div class="screenName"></div>
+		</div>
+		<div class="fakeScreen">
+		test
+		</div>
+	</div>
+
+
+<div class="userBio">
+<ul>
+	<li><%= image_tag "1.jpg", class: "imgProfile"%></li>
+	<li><h2><%= @user.nickname %></h2>	</li>				
+</ul>	
+<h4>
+<span><i style="font-size:18px" class="fa">&#xf073;</i></span> Member since <%= @user.created_at.to_formatted_s(:day_month_and_year) %></h4>
+<h4><span><i class="fa fa-line-chart" style="font-size:18px"></i></span>  Rating: <%= @user.rating %> </h4>
+
+<h4>Highlights:</h4>
+<p><%= @user.bio %> </p>
+</div>
+</div>

@@ -11,13 +11,26 @@
     <ul>
         <li><%= link_to "ScreenCode", root_path %> </li>
         <li class="auth">
-        <span><a href="#"> Log in </a></span>
-        <span><a href="#"> Sign up </a></span>
+       
+        
+        <% if user_signed_in? %>
+        <span><%= link_to  current_user.nickname  ,  user_path(current_user.id) %></span>
+        <span><%= link_to  "Sign out"  , destroy_user_session_path , method: :delete %></span>
+        <% else %>
+        <span><%= link_to  "Log in"  ,  new_user_session_path %></span>
+        <span><%= link_to  "Sign up",  new_user_registration_path %></span>
+        <% end %>
         </li>
     </ul>
 </header>
 
   <body>
+    
+    <% if notice || alert %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+
     <%= yield %>
     
   </body>
